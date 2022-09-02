@@ -30,12 +30,14 @@ h1 + p {
 }
 
 h2 {
+    margin-bottom: 0;
     font-size: 1.3125rem;
     font-weight: 900;
     color: #404040;
 }
 
 h2 + p {
+    margin-top: 0;
     color: #F18119;
     font-weight: 900;
     text-transform: uppercase;
@@ -65,4 +67,8 @@ strong {
     background-image: url(../images/dark-ribs.jpg);
     background-size: cover;
     background-position: center;
+}
+
+.main-content {
+
 }
