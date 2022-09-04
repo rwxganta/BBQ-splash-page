@@ -11,13 +11,16 @@ body {
 /* Typography */
 
 h1 {
+    margin: 2em 0;
+    color: #FFF;
     font-size: 3.25rem;
     font-weight: 300;
 }
 
 /* Combinator - Adjacent sibling */
-/* A paragraph tha's exactly after H1 will be selected */
+/* A paragraph that's exactly after H1 will be selected */
 h1 + p {
+    margin: 0;
     color: #F18119;
     font-weight: 900;
     font-size: 1.3125rem;
@@ -25,10 +28,12 @@ h1 + p {
 }
 
 h2 {
+    margin: 0;
     font-size: 1.3125;
 }
 
 h2 + p {
+    margin-top: 0;
     color: #F18119;
     font-size: 1rem;
     font-weight: 900;
@@ -43,9 +48,31 @@ strong { font-weight: 900; }
     font-weight: 900;
     color: #F18119;
     text-transform: uppercase;
+
+    order: -1;
 }
 
 .small-text {
     font-size: .625rem;
     letter-spacing: 1px;
+}
+
+
+/* Intro section */
+
+.intro {
+    padding: 0 .5em 2em;
+    background-color: #404040;
+    background-image: url(../images/dark-ribs.jpg);
+
+    display: flex;
+    flex-direction: column;
+    /* We set the .intro section as a flex container and new spacing just appear between text. Inside a flex container, margins DO NOT colapse. The margins on the text are not collapsing anymore, they're are adding now :) */
+}
+
+
+/* Main section */
+
+.main-content {
+    padding: 2em 1em;
 }
