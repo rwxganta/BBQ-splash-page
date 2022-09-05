@@ -15,7 +15,7 @@ body {
 /* Typography */
 
 h1 {
-    margin: 2em 0;
+    margin: 0;
     color: #FFF;
     font-size: 3.25rem;
     font-weight: 300;
@@ -56,7 +56,7 @@ strong { font-weight: 900; }
     order: -1;
 }
 
-.small-text {
+.fine-print {
     font-size: .625rem;
     letter-spacing: 1px;
 }
@@ -66,6 +66,7 @@ strong { font-weight: 900; }
 
 .intro {
     padding: 0 .5em 2em;
+    min-height: 50vh;
     background-color: #404040;
     background-image: url(../images/dark-ribs.jpg);
     background-size: cover;
@@ -74,6 +75,7 @@ strong { font-weight: 900; }
     display: flex;
     flex-direction: column;
     /* We set the .intro section as a flex container and new spacing just appear between text. Inside a flex container, margins DO NOT colapse. The margins on the text are not collapsing anymore, they're are adding now :) */
+    justify-content: space-between;
 }
 
 
@@ -84,12 +86,28 @@ strong { font-weight: 900; }
 }
 
 
+/**  **/
+
+/* On large screen the space in the sections became a lilttle too mouch.
+   Rule ofr setting a specific width to all direct children of the sections */
+
+/* There's nothing really wrong with this aprouch. 
+    Theres always a *little* peformance issue/concern when you are using the star selector.
+    Always a potential for a little issue.*/
+.intro > *,
+.main-content > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
 /* Media Queries */
 
 @media (min-width: 500px) {
     body {
         font-size: 1.125rem;
-
         display: flex;
     }
 
@@ -106,7 +124,7 @@ strong { font-weight: 900; }
     .main-content {
         width: 50%;
         min-height: 100vh; /* When using vh with height, always consider min-height as option */
-        /* But hey, I set it as min-height and the section still with some scrolling on it... Time to talk about |border-box| <3 */
+        /* But hey, I set it as min-height and the section still with some scrolling on it... Time to talk about box-sizing: border-box; */
     }
 
     .main-content {
