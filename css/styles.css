@@ -85,14 +85,11 @@ strong { font-weight: 900; }
     padding: 2em 1em;
 }
 
-
-/**  **/
-
 /* On large screen the space in the sections became a lilttle too mouch.
-   Rule ofr setting a specific width to all direct children of the sections */
+   Rule for setting a specific width to all direct children of the sections */
 
 /* There's nothing really wrong with this aprouch. 
-    Theres always a *little* peformance issue/concern when you are using the star selector.
+    There's always a *little* peformance issue/concern when you are using the star selector.
     Always a potential for a little issue.*/
 .intro > *,
 .main-content > * {
@@ -101,7 +98,28 @@ strong { font-weight: 900; }
     margin-right: auto;
 }
 
+/* FORM */
+.email-collector {
+    /* border: 2px solid tomato; */
+    width: 80%;
+    max-width: 300px;
+}
 
+/* anoying: input comes with a default width .-. */
+input,
+.btn {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Forms don't inherit the same way other elements do */
+input {
+    margin-bottom: .75em;
+    padding: .25em;
+    font-family: inherit;
+    text-align: center;
+    border: 1px solid #404040;
+}
 
 /* Media Queries */
 
